@@ -70,4 +70,11 @@ Vagrant.configure(2) do |config|
   # SHELL
 
   config.omnibus.chef_version=:latest
+  config.vm.provision "chef_zero" do |chef|
+    chef.nodes_path = "nodes"
+    chef.add_recipe "timezone-ii"
+    chef.json = {
+      "tz" => "Asia/Tokyo"
+    }
+  end
 end
