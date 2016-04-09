@@ -1,3 +1,3 @@
-name 'vault hello world'
+name 'vault-hello-world'
 maintainer 'hihira'
 license 'MIT'
